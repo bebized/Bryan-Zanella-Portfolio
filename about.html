@@ -13,35 +13,34 @@
   </head>
   <body>
     <nav class="navigation">
-      <input id="nav-toggle" type="checkbox" />
-      <div></div>
+      <ul class="nav-menu">
 
-      <ul class="navigation__list">
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#home">Home</a>
+        <li class="nav-item">
+          <a href="#home" class="nav-link heading__secondary">Home</a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#skills"
-            >Skills</a
-          >
+
+
+        <li class="nav-item">
+          <a href="#skills" class="nav-link heading__secondary">Skills</a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#projects"
-            >Projects</a
-          >
+        <li class="nav-item">
+          <a href="#projects" class="nav-link heading__secondary">Projects</a>
         </li>
-        <li class="navigation__list-item">
-          <a class="navigation__list-item-link" href="index.html#contact"
-            >Contact</a
-          >
+        <li class="nav-item">
+          <a href="#Contact" class="nav-link heading__secondary">Contact</a>
         </li>
+
+        <li class="nav-item">
+          <a href="href="https://github.com/bebized"" class="nav-link heading__secondary" target="newblank"> <i class="uil uil-github"></i> </a>
+        </li>
+
       </ul>
 
-      <label for="nav-toggle" class="navigation__icon-burger">
-        <div class="navigation__icon-burger-line"></div>
-        <div class="navigation__icon-burger-line2"></div>
-        <div class="navigation__icon-burger-line"></div>
-      </label>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
     <section class="about" id="about">
       <div class="about__container">
@@ -49,47 +48,57 @@
           That's my story
           <i class="uil uil-book-alt"> </i>
         </h2>
-        <h3 class="about__heading-2 heading__secondary">Once upon a time...</h3>
+        <h3 class="about__heading-2 heading__secondary">
+          <i> Once upon a time...</i>
+        </h3>
 
         <p class="paragraph about__paragraph">
           I'm joking! I'm Bryan, a
           <b class="bold">Junior UX designer </b>based in
-          <b class="bold">Italy</b> 🍕, ever since I was a kid, I have always
+          <b class="bold">Italy</b> 🍕. Ever since I was a kid, I have always
           loved <b class="bold">IT</b> and <b class="bold">design</b>.
 
           <br />
-          I think that in IT there is always a <b class="bold">solution</b> and
-          I live my life like that, there is a problem? so
-          <b class="bold">analyze</b> it, go to stakoverflow and... Oh NONO i
-          resolve it, there is inherent <b class="bold">problem-solving</b> in
-          my being. My Educational? is a bit <b class="bold">Strange</b>, since
-          9 years old i tryed to make something with my first
-          <b class="bold">Computer</b>, my dream was to become a "IT
-          technician".The dream was interrupted from the choise of the school
-          because i decided to make Accounting, a choise took a bit for i my
-          analysis and problem solving skills a bit for my parents suggestion,
-          After 5 years (6 to be honest ) graduation in accounting i started to
-          work in turism field as receptionist. After 2 years i was a Hotel
-          Receptionist, accountant and IT helper while i trying to make
-          Economics as University. During the Covid-19 pandemic i discover that
-          the life i was living wasn't mine and furthermore was what i hated
-          during my teen ages, a static work in a satureted field and a
-          "old"work. So i decided that i didn't wanna be the old boy with a old
-          work and a static life. and surfing in the net i discover an
-          impressive amount of new and innovative works. And a day i found
-          start2impact a
+          I believe that in IT there always is a
+          <b class="bold">solution</b>. And I live my life with this attitude:
+          is there a problem? I <b class="bold">analyze</b> it, go to
+          stakoverflow and ... Oh NONO! I fix it. <br />
+          There is inherent <b class="bold">problem-solving</b> in my being.
+          <br />
+          My education? That's a bit <b class="bold">strange</b>. Since I was 9
+          years old, I have constantly tried to make something out of my first
+          <b class="bold">PC</b> - my dream was to become an "IT technician".
+          <br />
+          <br />
+          A dream instantly interrupted by the choice of the middle-school. I
+          decided in fact to study accounting. I undertook this journey both for
+          my analytical and problem-solving skills, and for my parents
+          suggestions. <br />
+          After 5 years (6 to be honest) I've graduated in accounting and I
+          started to work in the tourism field as a receptionist. Two years
+          later, I was a hotel receptionist, an accountant, an IT assistant, and
+          in my free-time I was studying Economics at the University. <br />
+          <br />
+          During the Covid-19 pandemic, I have become aware that the life I was
+          living did not really belong to me. Furthermore I realized that I was
+          living the nightmare of my teen ages. <br />
+          <br />
+
+          All of a sudden, my dream, the one I had since I was a kid, got back
+          in my life. I started to surf in the net and I discovered an
+          impressive amount of brand-new innovative careers. And among the many
+          possibilities, one jumped out at me - the Start2impact
           <a
             class="about__link-s2i"
             href="https://talent.start2impact.it/profile/bryan-zanella"
             target="_blank"
           >
-            online course
-          </a>
-
-          that help you to reach a professional profile in the field you choose.
-          And i choose Ux design, and since that moment i loved that amazing
-          "new" World, A world that fit my being since i was Joung. And yes i
-          finally find my dream Job.
+            online course</a
+          >. And here I am today, with a professional profile in the Ux design
+          field. From day one I have loved this stunning <i>new </i> world. A
+          world that fits my being, ever since I was young. <br />
+          <br />
+          And yes, I am finally ready to live my dream job <i>with you</i>.
         </p>
 
         <nav class="about__navbar">
@@ -110,5 +119,25 @@
         </nav>
       </div>
     </section>
+
+    <script>const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      
+      hamburger.addEventListener("click", mobileMenu);
+      
+      function mobileMenu() {
+          hamburger.classList.toggle("active");
+          navMenu.classList.toggle("active");
+      } 
+      const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+      
+</script>
   </body>
 </html>

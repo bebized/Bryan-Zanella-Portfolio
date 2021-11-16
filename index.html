@@ -11,44 +11,61 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/img/site.webmanifest" />
   </head>
   <body>
     <!--******************************navbar+++++++++++++++++++++++++++++++++++++++++++++++++-->
     <div class="scroll__container">
       <nav class="navigation">
-        <input id="nav-toggle" type="checkbox" />
-        <div></div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link heading__secondary">Home</a>
+          </li>
 
-        <ul class="navigation__list">
-          <li class="navigation__list-item">
-            <a class="navigation__list-item-link" href="#home">Home</a>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link heading__secondary">Skills</a>
           </li>
-          <li class="navigation__list-item">
-            <a class="navigation__list-item-link" href="#skills">Skills</a>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link heading__secondary">Projects</a>
           </li>
-          <li class="navigation__list-item">
-            <a class="navigation__list-item-link" href="#projects">Projects</a>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link heading__secondary">Contact</a>
           </li>
-          <li class="navigation__list-item">
-            <a class="navigation__list-item-link" href="#contact">Contact</a>
-          </li>
-          <li class="navigation__list-item">
+
+          <li class="nav-item">
             <a
-              class="navigation__list-item-link"
-              href="https://github.com/bebized"
+              href="https://github.com/bebized/bebized"
+              class="nav-link heading__secondary"
               target="newblank"
-              ><i class="uil uil-github"></i
-            ></a>
+            >
+              <i class="uil uil-github"></i>
+            </a>
           </li>
         </ul>
 
-        <label for="nav-toggle" class="navigation__icon-burger">
-          <div class="navigation__icon-burger-line"></div>
-          <div class="navigation__icon-burger-line2"></div>
-          <div class="navigation__icon-burger-line"></div>
-        </label>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
-
       <!--******************************sectionabout+++++++++++++++++++++++++++++++++++++++++++++++++-->
       <section class="me" id="home">
         <h2 class="me__heading heading__primary">Ciao</h2>
@@ -161,10 +178,10 @@
           </div>
 
           <p class="contact__paragraph paragraph">
-            You take the <span class="bold">blue pill</span>— the
+            You take the <span class="bold">blue pill</span> — the
             <strong class="bold"> story ends</strong>, you wake up in your bed
             and believe whatever you want to believe. You take the
-            <span class="bold"> red pill </span> —you stay in
+            <span class="bold"> red pill </span> — you stay in
             <span class="bold">Wonderland</span>, and I show you how deep the
             rabbit hole goes. Remember: all I’m offering is
             <span class="bold">the truth</span>. Nothing more.
@@ -187,6 +204,44 @@
           </div>
         </div>
       </section>
+      <footer class="contact__footer">
+        <div class="contact__footer-contacts">
+          <p class="paragraph contact__footer-mail">
+            <details class="paragraph contact__footer-mail">
+              <summary>
+                click to show the mail <i class="uil uil-envelope-alt"></i>
+              </summary>
+              <ul class="contact__footer-list">
+                <li class="contact__footer-list-item">zanella.b@outlook.com</li>
+              </ul>
+            </details>
+          </p>
+        </div>
+        <p class="paragraph contact__footer-copyright">
+          Website powered by me, a lot of coffee ☕️ and without cookies 🍪
+        </p>
+      </footer>
     </div>
+    <!--script per attivare il menu e chiuderlo nel click sul link-->
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+      const navLink = document.querySelectorAll(".nav-link");
+
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
   </body>
 </html>

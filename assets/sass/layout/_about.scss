@@ -70,7 +70,6 @@
   &__link-s2i {
     text-decoration: none;
     color: $color-secondary;
-    box-shadow: $color-primary 0.2rem 0.2rem;
     font-family: "AtkinsonRegular", Sans-serif;
     font-size: 2rem;
     @include screen-min(768px) {

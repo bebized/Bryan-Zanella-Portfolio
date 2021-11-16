@@ -14,7 +14,14 @@
   font-weight: 100;
   color: $color-primary;
   @include screen-max(320px) {
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+  @include screen-max(500px) {
+    font-size: 4rem;
+  }
+
+  @include screen-max-land(411px) {
+    font-size: 3rem;
   }
 }
 .heading__secondary {
@@ -23,13 +30,19 @@
   font-weight: 100;
   color: $color-primary;
   @include screen-max(320px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  @include screen-max(500px) {
+    font-size: 2rem;
   }
   @include screen-min(768px) {
     font-size: 4rem;
   }
   @include screen-min(1920px) {
     font-size: 5rem;
+  }
+  @include screen-max-land(411px) {
+    font-size: 2rem;
   }
 }
 .heading__tertiary {
@@ -45,12 +58,18 @@
   font-weight: 100;
   color: $color-primary;
   @include screen-max(320px) {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+  }
+  @include screen-max(500px) {
+    font-size: 1.5rem;
   }
   @include screen-min(768px) {
     font-size: 2rem;
   }
   @include screen-min(1920px) {
     font-size: 2.5rem;
+  }
+  @include screen-max-land(411px) {
+    font-size: 1.5rem;
   }
 }

@@ -13,6 +13,12 @@
     grid-template-rows: auto;
     margin: 2rem 3rem;
     gap: 1rem;
+    @include screen-max-land(411px) {
+      gap: 0.3rem;
+    }
+    @include screen-max(500px) {
+      gap: 0.5rem;
+    }
   }
 
   &__heading-1 {
@@ -43,7 +49,7 @@
     grid-column: 1 / 5;
     justify-self: center;
 
-    @include screen-min(650px) {
+    @include screen-min(250px) {
       text-align: center;
       margin: 0 3rem;
     }
@@ -67,7 +73,6 @@
     &-item {
       margin: 0.5rem 2rem;
       font-family: "atkinsonbold";
-      font-size: 2.5rem;
       color: $color-secondary;
       @include screen-max(370px) {
         font-size: 1.7rem;
@@ -75,6 +80,9 @@
       @include screen-min(1024px) {
         justify-self: center;
         margin: 0.5rem 3.5rem;
+      }
+      @include screen-max-land(411px) {
+        font-size: 1.7rem;
       }
     }
   }
@@ -84,6 +92,7 @@
     grid-column: 1 / 5;
     justify-self: center;
     margin-top: 4rem;
+
     @include screen-min(768px) {
       justify-self: center;
       margin-top: 10rem;
@@ -91,6 +100,9 @@
     @include screen-min(1024px) {
       justify-self: center;
       margin-top: 6rem;
+    }
+    @include screen-max-land(411px) {
+      margin-top: 1.5rem;
     }
   }
   &__line-2 {
@@ -111,7 +123,7 @@
   }
   &__paragraph-2 {
     grid-column: 1 / 5;
-    @include screen-min(650px) {
+    @include screen-min(250px) {
       text-align: center;
       margin: 0 3rem;
     }
@@ -138,9 +150,11 @@
     &-item-2 {
       margin: 0.5rem 2rem;
       font-family: "atkinsonbold";
-      font-size: 2.5rem;
       color: $color-secondary;
       @include screen-max(370px) {
+        font-size: 1.7rem;
+      }
+      @include screen-max-land(411px) {
         font-size: 1.7rem;
       }
     }
